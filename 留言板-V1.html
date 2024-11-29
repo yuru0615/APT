@@ -14,9 +14,6 @@
   </section>
   <section id="textlist"></section>
   <script>
-    // step02 會使用陣列來儲存資料
-    let textarray = [];
-
     // 1.有區塊可以輸入留言、送出留言
     // 2.留言的文字會一個一個顯示在畫面上
     // step01 先使用innerHTML方式新增到畫面上
@@ -32,17 +29,9 @@
       //   return;
       // }
       if (userinput.value == '') return;
-      textarray.push(userinput.value);
-      // 會把顯示畫面的東西，替換成陣列裡面的內容來產生
-      // textlist.innerHTML += `<div>${userinput.value}</div>`;
-      textlist.innerHTML = '';//清空內容
-      textarray.forEach(element => {
-        textlist.innerHTML += `<div>${element}</div>`;
-        // console.log(element);
-      });
-
+      textlist.innerHTML += `<div>${userinput.value}</div>`;
       // 取得到輸入文字
-      console.log(userinput.value, textarray);
+      console.log(userinput.value);
     });
   </script>
 </body>
